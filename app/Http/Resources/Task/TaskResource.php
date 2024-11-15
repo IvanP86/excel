@@ -18,9 +18,11 @@ class TaskResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'user' => new UserResource($this->user),
             'file' => new FileResource($this->file),
             'status' => Task::getStatuses()[$this->status],
+            'failed_rows_count' => $this->failed_rows_count,
         ];
     }
 }

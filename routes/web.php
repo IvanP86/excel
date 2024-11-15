@@ -42,6 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/projects/import', [ProjectController::class, 'import'])->name('project.import');
     Route::post('/projects/import', [ProjectController::class, 'importStore'])->name('project.import.store');
     Route::get('/tasks', [TaskController::class, 'index'])->name('task.index');
+    Route::get('/tasks/${task}/failed_list', [TaskController::class, 'failedList'])->name('task.failed_list');
     Route::get('/php', [PhpController::class, 'index'])->name('php.index');
 });
 require __DIR__ . '/auth.php';
