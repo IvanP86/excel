@@ -11,8 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('failed_rows', function (Blueprint $table) {
-            $table->unsignedBigInteger('row')->nullable();
+        Schema::create('payments', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('project_id')->index()->constrained('projects');
+            $table->string('title');
+            $table->integer('value');
+            $table->timestamps();
         });
     }
 
@@ -21,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('failed_rows', function (Blueprint $table) {
-            $table->dropColumn('row');
-        });
+        Schema::dropIfExists('payments');
     }
 };
