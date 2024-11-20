@@ -20,7 +20,5 @@ class File extends Model
             'mime_type' => $dataFile->getClientOriginalExtension(),
             'title' => $dataFile->getClientOriginalExtension()
         ]);
-
-        // return $path;
     }
 }
