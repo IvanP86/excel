@@ -29,9 +29,7 @@ class TestCommand extends Command
      */
     public function handle()
     {
-        // dd(11111111111111);
         Excel::import(new ProjectDynamicImport(Task::find(1)), '/files/projects2.xlsx', 'public');
-        // return Command::SUCCESS;
         $this->info('The command was successful!');
     }
 }
