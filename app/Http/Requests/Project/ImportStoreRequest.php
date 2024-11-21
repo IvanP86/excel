@@ -28,7 +28,8 @@ class ImportStoreRequest extends FormRequest
         }
         // Сделать потом дополнительную валидацию через after()
         return [
-            'file' => 'required|file'
+            'file' => 'required|file',
+            'type' => 'required|integer|in:1,2'
         ];
     }
 }
