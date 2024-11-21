@@ -18,6 +18,9 @@
             </div>
             <slot />
         </div>
+        <div v-if="$page.props.flash.message" class="mt-4 text-green-600 text-center">
+            {{ $page.props.flash.message }}
+        </div>
     </div>
 </template>
 

@@ -41,6 +41,9 @@ class ProjectController extends Controller
             'type' => $data['type']
 
         ]);
-        ImportProjectExcelFileJob::dispatchSync($file->path, $task);
+        // ImportProjectExcelFileJob::dispatchSync($file->path, $task);
+        ImportProjectExcelFileJob::dispatch($file->path, $task);
+
+        return redirect()->back()->with(['message' => 'Excel import in process']);
     }
 }
