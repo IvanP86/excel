@@ -58,32 +58,6 @@ class ProjectDynamicImport implements ToCollection, WithValidation, SkipsOnFailu
                     'value' => $item
                 ]);
             }
-            // $project = Project::create([
-            //     'type_id' => $this->getTypeId($typesMap, $row['tip']),
-            //     'title' => $row['naimenovanie'],
-            //     'created_at_time' => Date::excelToDateTimeObject($row["data_sozdaniia"]),
-            //     'contracted_at' => Date::excelToDateTimeObject($row["podpisanie_dogovora"]),
-            //     'deadline' => isset($row["dedlain"]) ? Date::excelToDateTimeObject($row["dedlain"]) : null,
-            //     'is_chain' => isset($row['setevik']) ? $this->getBoolean($row["setevik"]) : null,
-            //     'is_on_time' => isset($row['sdaca_v_srok']) ? $this->getBoolean($row["sdaca_v_srok"]) : null,
-            //     'has_outsource' => isset($row["nalicie_autsorsinga"]) ? $this->getBoolean($row["nalicie_autsorsinga"]) : null,
-            //     'has_investors' => isset($row["nalicie_investorov"]) ? $this->getBoolean($row["nalicie_investorov"]) : null,
-            //     'worker_count' => $row["kolicestvo_ucastnikov"] ?? null,
-            //     'service_count' => $row["kolicestvo_uslug"] ?? null,
-            //     'payment_first_step' => $row["vlozenie_v_pervyi_etap"] ?? null,
-            //     'payment_second_step' => $row["vlozenie_vo_vtoroi_etap"] ?? null,
-            //     'payment_third_step' => $row["vlozenie_v_tretii_etap"] ?? null,
-            //     'payment_forth_step' => $row["vlozenie_v_cetvertyi_etap"] ?? null,
-            //     'comment' => $row["kommentarii"] ?? null,
-            //     'effective_value' => $row["znacenie_effektivnosti"] ?? null,
-            // ]);
-            // $projectFactory = ProjectFactory::make($typesMap, $row);
-            // $project = Project::updateOrCreate([
-            //     'type_id' => $projectFactory->getSelfValues()['type_id'],
-            //     'title' => $projectFactory->getSelfValues()['title'],
-            //     'created_at_time' => $projectFactory->getSelfValues()['created_at_time'],
-            //     'contracted_at' => $projectFactory->getSelfValues()['contracted_at'],
-            // ], $projectFactory->getSelfValues());
         }
     }
 

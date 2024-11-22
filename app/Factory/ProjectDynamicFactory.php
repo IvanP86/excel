@@ -38,10 +38,6 @@ class ProjectDynamicFactory
         $hasInvestors,
         $workerCount,
         $serviceCount,
-        // $paymentFirstStep,
-        // $paymentSecondStep,
-        // $paymentThirdStep,
-        // $paymentForthStep,
         $comment,
         $effectiveValue
     ) {
@@ -56,10 +52,6 @@ class ProjectDynamicFactory
         $this->hasInvestors = $hasInvestors;
         $this->workerCount = $workerCount;
         $this->serviceCount = $serviceCount;
-        // $this->paymentFirstStep = $paymentFirstStep;
-        // $this->paymentSecondStep = $paymentSecondStep;
-        // $this->paymentThirdStep = $paymentThirdStep;
-        // $this->paymentForthStep = $paymentForthStep;
         $this->comment = $comment;
         $this->effectiveValue = $effectiveValue;
     }
@@ -78,10 +70,6 @@ class ProjectDynamicFactory
             isset($row[6]) ? self::getBoolean($row[6]) : null,
             $row[4] ?? null,
             $row[10] ?? null,
-            // $row["vlozenie_v_pervyi_etap"] ?? null,
-            // $row["vlozenie_vo_vtoroi_etap"] ?? null,
-            // $row["vlozenie_v_tretii_etap"] ?? null,
-            // $row["vlozenie_v_cetvertyi_etap"] ?? null,
             $row[11] ?? null,
             $row[12] ?? null,
         );

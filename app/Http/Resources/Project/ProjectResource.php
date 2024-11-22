@@ -31,12 +31,6 @@ class ProjectResource extends JsonResource
             'has_investors' => $this->has_investors ? 'Да' : 'Нет',
             'worker_count' => $this->worker_count,
             'service_count' => $this->service_count,
-            // 'payment_first_step' => $this->payment_first_step,
-            // 'payment_second_step' => $this->payment_second_step,
-            // 'payment_third_step' => $this->payment_third_step,
-            // 'payment_forth_step' => $this->payment_forth_step,
-            // 'comment' => $this->comment,
-            // 'effective_value' => $this->effective_value,
         ];
     }
 }
