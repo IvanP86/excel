@@ -124,7 +124,7 @@ class ProjectDynamicImport implements ToCollection, WithValidation, SkipsOnFailu
         foreach ($failures as $failure) {
             foreach ($failure->errors() as $error) {
                 $map[] = [
-                    'key' => $this->attributMap()[$failure->attribute()],
+                    'key' => $this->getAttributMap()[$failure->attribute()],
                     'row' => $failure->row(),
                     'message' => $error,
                     'task_id' => $this->task->id
@@ -136,7 +136,7 @@ class ProjectDynamicImport implements ToCollection, WithValidation, SkipsOnFailu
         }
     }
 
-    private function attributMap(): array
+    private function getAttributMap(): array
     {
         return array_replace([
             "0" => "Тип",
